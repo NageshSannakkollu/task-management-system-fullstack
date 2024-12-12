@@ -1,25 +1,21 @@
-import logo from './logo.svg';
-import './App.css';
+import {BrowserRouter,Routes,Route} from "react-router-dom"
+import HomePage from "./components/HomePage"
+import AddTaskPage from "./components/AddTaskPage"
+import UpdateTask from "./components/UpdateTask"
+import Signup from "./components/Signup"
+import LoginPage from "./components/LoginPage"
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+const App = () => (
+  
+  <BrowserRouter>
+    <Routes>
+      <Route exact path="/signup" element={<Signup/>}/>
+      <Route exact path="/login" element={<LoginPage/>}/>
+      <Route exact path="/" element={<HomePage/>} />
+      <Route exact path="/add-task" element={<AddTaskPage/>} />
+      <Route exact path="/update-task/:id" element={<UpdateTask/>}/>
+    </Routes>
+  </BrowserRouter>
+)
 
-export default App;
+export default App 

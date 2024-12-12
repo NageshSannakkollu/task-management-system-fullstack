@@ -1,0 +1,24 @@
+.header-nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100px;
+    padding: 10px 30px;
+    background-color: #faf5f9;
+    position: fixed;
+    top: 0px;
+    width: 95%;
+}
+.company-logo {
+    height: 80px;
+    width: 70%;
+}
+.un-order-header-items {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 40%;
+    list-style-type: none;
+    margin-left: 0px;
+    padding-left: 0px;
+}

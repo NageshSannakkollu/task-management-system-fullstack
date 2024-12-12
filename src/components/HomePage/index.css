@@ -1,0 +1,110 @@
+.main-app-container {
+    background-color: aliceblue;
+}
+
+.home-page-container {
+    margin-top: 120px;
+}
+
+.add-task-list-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 50px;
+}
+
+.add-task-button {
+    background-color: #0f59e2;
+    color: #fafafa;
+}
+
+
+.main-title {
+    align-self: center;
+    font-weight: 800;
+    font-size: 27px;
+    font-family: sans-serif;
+    text-decoration: underline;
+}
+.task-list-table-info-container {
+    padding: 0px 50px;
+}
+
+.task-list-main-titles-container {
+    display: flex;
+    align-items: center;
+    list-style-type:none;
+    margin-left: 0px;
+    padding-left: 0px;
+    background-color: aquamarine;
+    font-weight: 700;
+    font-size: 18px;
+    padding: 10px 20px;
+}
+
+.task-list-items {
+    margin-left: 0px;
+    padding-left: 0px;
+    background-color: bisque;
+}
+.id {
+    width: 5%;
+    padding: 0px 10px;
+}
+.user-id {
+    width: 10%;
+    padding: 0px 10px;
+}
+.title {
+    width: 15%;
+    padding: 0px 10px;
+}
+.description{
+    width: 25%;
+    padding: 0px 10px;
+}
+.status {
+    width: 15%;
+    padding: 0px 10px;
+}
+
+.update {
+    width: 120px;
+    padding: 0px 10px;
+}
+.delete{
+    width: 100px;
+    padding: 0px 10px;
+}
+
+.search-input {
+    width: 50%;
+    padding: 8px 35px;
+    cursor: pointer;
+    outline: none;
+    border: 0;
+    background-color: aquamarine;
+    border-radius: 6px;
+}
+
+.login-signup-buttons-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 15%;
+}
+.title-buttons-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 40px;
+}
+.login-button {
+    border: 0px;
+    background-color: transparent;
+    cursor: pointer;
+    outline: none;
+    font-weight: 700;
+    font-size: 18px;
+    text-decoration: underline;
+}
