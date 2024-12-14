@@ -6,7 +6,6 @@ import Signup from "./components/Signup"
 import LoginPage from "./components/LoginPage"
 
 const App = () => (
-  
   <BrowserRouter>
     <Routes>
       <Route exact path="/signup" element={<Signup/>}/>

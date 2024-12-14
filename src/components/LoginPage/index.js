@@ -10,6 +10,8 @@ const LoginPage = () => {
         password:''
     })
     const [passwordType,setPasswordType] = useState(false)
+    const [loginError,setLoginError] = useState(false)
+    const [errorMessage,setErrorMessage] = useState('')
 
     const navigate = useNavigate()
     const loginHandler = async(e) => {
@@ -19,8 +21,10 @@ const LoginPage = () => {
             const userResponse = await axios.post(`http://localhost:3009/api/auth/login`,values)
             localStorage.setItem("jwtToken",userResponse.data.jwtToken)
             navigate("/")
-        } catch (error) {
-            console.log("Login failed.")
+        } catch (err) {
+            setLoginError(true)
+            setErrorMessage("Invalid Credentials")
+            setValues({username:'',password:''})
         }
     }
 
@@ -52,6 +56,7 @@ const LoginPage = () => {
             <br/><br/>
             <button type='submit' className="add-button">Login</button>
             <p className='click-here-links'>Not Registered? <Link to="/signup"><span>Click here..</span></Link></p>
+            {loginError && <p className='error-message'>* {errorMessage}</p>}
         </form>
     </div>
     </>

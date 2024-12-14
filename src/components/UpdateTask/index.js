@@ -12,7 +12,7 @@ const UpdatePage = () => {
     const navigate = useNavigate()
     useEffect(() => {
         const getData = async() => {
-            axios.get(`http://localhost:3009/api/tasks/${id}`)
+            axios.get(`https://task-management-backend-system.netlify.app/api/tasks/${id}`)
             .then((response) => {
                 console.log(response.data)
                 setValues([response.data])
@@ -25,7 +25,7 @@ const UpdatePage = () => {
 
     const updateTaskHandler = event=> {
         event.preventDefault()
-        axios.put(`http://localhost:3009/api/tasks/${id}`,values[0])
+        axios.put(`https://task-management-backend-system.netlify.app/api/tasks/${id}`,values[0])
         .then(response => {
             navigate("/")
             console.log("Response:",response)
